@@ -1,0 +1,186 @@
+/* Estilos Globais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(3, 116, 87);
+  color: white;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Estilo do Calendário */
+.calendar-container {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 800px; /* Tamanho fixo do calendário */
+  height: 600px; /* Tamanho fixo do calendário */
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgb(3, 116, 87);
+  color: white;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.calendar {
+  width: 100%;
+  height: calc(100% - 60px); /* Ajusta altura para ocupar o restante da área */
+  border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+  width: 14.2%;
+  height: 12%; /* Define altura proporcional */
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.calendar th {
+  background-color: #f4f4f4;
+}
+
+.calendar td {
+  cursor: pointer;
+}
+
+.calendar td:hover {
+  background-color: #e0f7e9;
+}
+
+.calendar td.disabled {
+  color: #bbb;
+  cursor: not-allowed;
+}
+
+.calendar td.today {
+  background-color: rgb(3, 116, 87);
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color:  rgb(3, 116, 87);
+  color: white;
+}
+
+/* Estilo para dias agendados */
+.calendar td.scheduled {
+  background-color: rgb(3, 116, 87); 
+  color: #333;
+  font-weight: bold;
+  cursor: default;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.calendar-container {
+  width: 60%; /* Ocupa 60% da largura do main */
+}
+
+.chart-container {
+  width: 30%; /* Ocupa 30% da largura do main */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#scheduleChart {
+  width: 100%;
+  max-width: 400px;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.info-container, .schedule-container {
+  width: 20%;
+}
+
+.info-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.legend {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.legend.available {
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+.legend.unavailable {
+  background-color: rgb(3, 116, 87);
+}
+
+.calendar-container {
+  width: 50%;
+}
+
+.schedule-container {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+#scheduled-days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.scheduled-day {
+  background-color: rgb(3, 116, 87);
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+  min-width: 60px;
+}
+
